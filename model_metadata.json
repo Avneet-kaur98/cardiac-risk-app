@@ -1,0 +1,137 @@
+{
+  "model_name": "Random Forest",
+  "numeric_features": [
+    "Age",
+    "RestingBP",
+    "Cholesterol",
+    "FastingBS",
+    "MaxHR",
+    "Oldpeak"
+  ],
+  "categorical_features": [
+    "Sex",
+    "ChestPainType",
+    "RestingECG",
+    "ExerciseAngina",
+    "ST_Slope"
+  ],
+  "categorical_options": {
+    "Sex": [
+      "F",
+      "M"
+    ],
+    "ChestPainType": [
+      "ASY",
+      "ATA",
+      "NAP",
+      "TA"
+    ],
+    "RestingECG": [
+      "LVH",
+      "Normal",
+      "ST"
+    ],
+    "ExerciseAngina": [
+      "N",
+      "Y"
+    ],
+    "ST_Slope": [
+      "Down",
+      "Flat",
+      "Up"
+    ]
+  },
+  "numeric_ranges": {
+    "Age": [
+      28.0,
+      77.0
+    ],
+    "RestingBP": [
+      0.0,
+      200.0
+    ],
+    "Cholesterol": [
+      0.0,
+      603.0
+    ],
+    "FastingBS": [
+      0.0,
+      1.0
+    ],
+    "MaxHR": [
+      60.0,
+      202.0
+    ],
+    "Oldpeak": [
+      -2.6,
+      6.2
+    ]
+  },
+  "numeric_defaults": {
+    "Age": 54.0,
+    "RestingBP": 130.0,
+    "Cholesterol": 223.0,
+    "FastingBS": 0.0,
+    "MaxHR": 138.0,
+    "Oldpeak": 0.6
+  },
+  "model_comparison": [
+    {
+      "model": "Random Forest",
+      "accuracy": 0.908,
+      "roc_auc": 0.932
+    },
+    {
+      "model": "Gradient Boosting",
+      "accuracy": 0.891,
+      "roc_auc": 0.931
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.886,
+      "roc_auc": 0.93
+    }
+  ],
+  "global_importance": [
+    {
+      "feature": "ST_Slope_Up",
+      "importance": 0.15097244981901292
+    },
+    {
+      "feature": "ST_Slope_Flat",
+      "importance": 0.09986330627970069
+    },
+    {
+      "feature": "Oldpeak",
+      "importance": 0.09521212614149802
+    },
+    {
+      "feature": "MaxHR",
+      "importance": 0.09479186385290514
+    },
+    {
+      "feature": "ChestPainType_ASY",
+      "importance": 0.09271007503056318
+    },
+    {
+      "feature": "Cholesterol",
+      "importance": 0.09175576075325065
+    },
+    {
+      "feature": "Age",
+      "importance": 0.0694364953623676
+    },
+    {
+      "feature": "RestingBP",
+      "importance": 0.06535321312008605
+    },
+    {
+      "feature": "ExerciseAngina_N",
+      "importance": 0.051495168169509435
+    },
+    {
+      "feature": "ExerciseAngina_Y",
+      "importance": 0.050638674858716586
+    }
+  ]
+}
